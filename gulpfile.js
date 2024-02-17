@@ -6,7 +6,7 @@ const rename = require('gulp-rename');
 const htmlhint = require("gulp-htmlhint");
 
 const gulpSvgmin = () =>
-    gulp.src('svg-icons/*.svg')
+    gulp.src('icons/*.svg')
         .pipe(svgmin(() => {
             return {
                 plugins: [{ removeViewBox: false },
@@ -20,10 +20,10 @@ const gulpSvgmin = () =>
                     {removeEmptyAttrs: false}]
             }
         }))
-        .pipe(gulp.dest('svg-icons/min'));
+        .pipe(gulp.dest('icons/min'));
 
 const gulpSvgStore = () =>
-    gulp.src('svg-icons/min/*.svg')
+    gulp.src('icons/min/*.svg')
         .pipe(svgstore())
         .pipe(cheerio({
             run: function ($) {

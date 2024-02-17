@@ -1,0 +1,32 @@
+// SVG ICON COMPONENTS
+$svg-icon--logo__width: 142px !default;
+$svg-icon--logo__height: 18px !default;
+
+// variables
+$svg-icon__fill: $color-white1 !default;
+$svg-icon__width: 20px !default;
+$svg-icon__height: 20px !default;
+
+$svg-icon--arrow-right-white__width: 12px !default;
+$svg-icon--arrow-right-white__height: 10px !default;
+$svg-icon--arrow-right-white__color: $color-white1 !default;
+$svg-icon--arrow-right-white__stroke: $color-white1 !default;
+
+
+@if $media-target == "all" {
+  //  STYLES FOR ALL SCREEN TYPES
+  .svg-icon {
+    & {
+      display: inline-block;
+      @include sizes($svg-icon__width, $svg-icon__height);
+      fill: $svg-icon__fill;
+    }
+
+    &.arrow-right-white {
+      @include sizes($svg-icon--arrow-right-white__width,
+                    $svg-icon--arrow-right-white__height);
+      fill: $svg-icon--arrow-right-white__color;
+      stroke: $svg-icon--arrow-right-white__stroke;
+    }
+  }
+}

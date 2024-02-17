@@ -1,0 +1,28 @@
+//MEDIA
+$media-target: "all" !default;
+
+// COLORS
+$color-gray1: #737373 !default;
+$color-white1: white !default;
+$color-black1: #252B42 !default;
+
+$color_primary: #b2e3ff !default;
+$color_secondary: #23a6f0 !default;
+
+// colors of blocks
+$block--blue__bg: $color_primary !default;
+
+// breakpoints
+$breakpoint_xxl: 1440px !default;
+
+//FONTS
+//font-weights
+$font_weight1: 400 !default;
+$font_weight2: 700 !default;
+
+//font-sizes
+$font-size1: 12px !default;
+$font-size2: 14px !default;
+$font-size3: 16px !default;
+$font-size4: 18px !default;
+$font-size5: 20px !default;

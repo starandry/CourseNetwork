@@ -1,0 +1,8 @@
+.header-wrap {
+  display: flex;
+}
+
+.header-nav {
+  @include rowing(space-between);
+  flex-grow: 1;
+}
