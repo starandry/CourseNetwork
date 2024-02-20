@@ -1,0 +1,31 @@
+.product {
+  @include rowing(end, null, column);
+  min-height: 300px;
+}
+
+.link-adv-wrap {
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.product-title {
+  max-width: 390px;
+  padding-bottom: 12px;
+  @include fonts(40px, $font_weight2);
+  line-height: 50px;
+  letter-spacing: -0.8px;
+}
+
+.product-text {
+  max-width: 470px;
+  padding-bottom: 5px;
+  @include fonts($font-size2, $font_weight1);
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: $color-gray1;
+}
+
+.product-title,
+.product-text {
+  word-wrap: break-word;
+}

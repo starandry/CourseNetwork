@@ -1,7 +1,5 @@
 .logo {
   @include sizes ($svg-icon--logo__width,
-                  $svg-icon--logo__width,
-                  null,
-                  30px 40px 0 0);
+                  $svg-icon--logo__height);
   fill: $color-black1;
 }

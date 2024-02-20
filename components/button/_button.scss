@@ -1,3 +1,29 @@
-.join-button {
-  background-color: $color_secondary;
+.btn {
+  @include fonts($font-size2, $font_weight2);
+
+  &.-join {
+    padding: 20px 25px;
+    border: hidden;
+    border-radius: $border-radius1;
+    color: $color-white1;
+    background-color: $color_secondary;
+  }
+
+  &.-get-quote {
+    text-align: center;
+    border: $border1;
+    border-radius: $border-radius1;
+    padding: 20px 40px;
+    color: $color-white1;
+    background-color: $color_secondary;
+  }
+
+  &.-learn-more {
+    padding: 20px 40px;
+    text-align: center;
+    border: $border1;
+    border-radius: $border-radius1;
+    color: $color_secondary;
+    background-color: transparent;
+  }
 }

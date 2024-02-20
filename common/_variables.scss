@@ -3,8 +3,12 @@ $media-target: "all" !default;
 
 // COLORS
 $color-gray1: #737373 !default;
+$color-gray2: #ececec !default;
 $color-white1: white !default;
 $color-black1: #252B42 !default;
+$color-green1: #2DC071 !default;
+$color-red1: #e74040 !default;
+$color-dark-blue1: #2a7cc7 !default;
 
 $color_primary: #b2e3ff !default;
 $color_secondary: #23a6f0 !default;
@@ -26,3 +30,12 @@ $font-size2: 14px !default;
 $font-size3: 16px !default;
 $font-size4: 18px !default;
 $font-size5: 20px !default;
+
+//letter-spaces
+$letter-space1: 0.2px !default;
+$letter-space2: 0.3px!default;
+
+//borders
+$border1: 1px solid $color_secondary !default;
+$border-radius1: 5px !default;
+$border-radius2: 10px !default;

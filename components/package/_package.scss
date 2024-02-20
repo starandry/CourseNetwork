@@ -1,0 +1,33 @@
+.package {
+  @include rowing(space-between, center);
+  min-height: 875px;
+}
+
+.package-title {
+  max-width: 400px;
+  @include fonts(40px, $font_weight2);
+  line-height: 50px;
+  letter-spacing: -.9px;
+  color: $color-black1;
+
+  &::before {
+    content: '';
+    display: block;
+    @include sizes(94px, 7px, null, 0 0 37px 0);
+    background-color: $color-red1;
+  }
+}
+
+.package-text {
+  max-width: 350px;
+  @include fonts($font-size2, $font_weight1);
+  line-height: 20px;
+  letter-spacing: $letter-space2;
+  color: $color-gray1;
+}
+
+.package-title,
+.package-text {
+  padding-bottom: 35px;
+  word-wrap: break-word;
+}

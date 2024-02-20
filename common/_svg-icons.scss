@@ -7,26 +7,62 @@ $svg-icon__fill: $color-white1 !default;
 $svg-icon__width: 20px !default;
 $svg-icon__height: 20px !default;
 
-$svg-icon--arrow-right-white__width: 12px !default;
-$svg-icon--arrow-right-white__height: 10px !default;
-$svg-icon--arrow-right-white__color: $color-white1 !default;
-$svg-icon--arrow-right-white__stroke: $color-white1 !default;
+$svg-icon--arrow-white__width: 12px !default;
+$svg-icon--arrow-white__height: 10px !default;
+$svg-icon--heart__width: 25px !default;
+$svg-icon--heart__height: 25px !default;
+$svg-icon--bibelot__width: 25px !default;
+$svg-icon--bibelot__height: 25px !default;
+$svg-icon--books__width: 25px !default;
+$svg-icon--books__height: 25px !default;
+$svg-icon--arrow-blue__width: 10px !default;
+$svg-icon--barrow-blue__height: 16px !default;
+$svg-icon--arrow-white__color: $color-white1 !default;
+$svg-icon--heart__color: $color-green1 !default;
+$svg-icon--bibelot__color: $color-red1 !default;
+$svg-icon--books__color: $color-dark-blue1 !default;
+$svg-icon--arrow-blue__color: $color_secondary !default;
 
 
-@if $media-target == "all" {
-  //  STYLES FOR ALL SCREEN TYPES
-  .svg-icon {
-    & {
-      display: inline-block;
-      @include sizes($svg-icon__width, $svg-icon__height);
-      fill: $svg-icon__fill;
-    }
+//  STYLES FOR ALL SCREEN TYPES
+.svg-icon {
+  & {
+    display: inline-block;
+    @include sizes($svg-icon__width, $svg-icon__height);
+    fill: $svg-icon__fill;
+  }
 
-    &.arrow-right-white {
-      @include sizes($svg-icon--arrow-right-white__width,
-                    $svg-icon--arrow-right-white__height);
-      fill: $svg-icon--arrow-right-white__color;
-      stroke: $svg-icon--arrow-right-white__stroke;
-    }
+  &.arrow-white {
+    @include sizes($svg-icon--arrow-white__width,
+                  $svg-icon--arrow-white__height);
+    margin-left: 13px;
+    fill: $svg-icon--arrow-white__color;
+    stroke: $svg-icon--arrow-white__color;
+  }
+
+  &.heart-green {
+    @include sizes($svg-icon--heart__width,
+            $svg-icon--heart__height);
+    fill: $svg-icon--heart__color;
+  }
+
+  &.bibelot {
+    @include sizes($svg-icon--bibelot__width,
+            $svg-icon--bibelot__height);
+    fill: $svg-icon--bibelot__color;
+  }
+
+  &.books {
+    @include sizes($svg-icon--books__width,
+            $svg-icon--books__height);
+    fill: $svg-icon--books__color;
+  }
+
+  &.arrow-blue {
+    @include sizes($svg-icon--arrow-blue__width,
+            $svg-icon--barrow-blue__height);
+    fill: $svg-icon--arrow-blue__color;
+    stroke: $svg-icon--arrow-blue__color;
   }
 }
+

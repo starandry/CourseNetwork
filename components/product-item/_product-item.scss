@@ -1,0 +1,14 @@
+.img-wrap {
+  position: relative;
+}
+
+.product-label {
+  position: absolute;
+  left: 21px;
+  top: 19px;
+  @include rowing(center, center);
+  @include sizes(51px, 24px);
+  @include fonts(14px, $font_weight2);
+  background-color: #e74040;
+  color: #ffffff;
+}

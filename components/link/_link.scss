@@ -1,15 +1,26 @@
-.primary-link {
-  font: {
-    size: $font_size2;
-    weight: $font-weight2;
+.link {
+  @include fonts($font_size2, $font-weight2);
+
+  &.-primary {
+    padding-top: 20px;
   }
-  color: $color_secondary;
+
+  &.-nav {
+    color: $color-gray1;
+  }
+
+  &.-learn {
+    @include rowing(null, center);
+  }
+
+  &.-primary,
+  &.-learn,
+  &.-advice {
+    color: $color_secondary;
+  }
 }
 
-.link-nav {
-  font: {
-    size: $font_size2;
-    weight: $font-weight2;
-  }
-  color: $color-gray1;
+
+.arrow-blue-spaced {
+  margin-left: 10px;
 }

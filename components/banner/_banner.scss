@@ -1,0 +1,33 @@
+.banner-wrap {
+  @include rowing(end, center, column);
+  min-height: 670px;
+}
+
+.banner-title {
+  text-align: center;
+  width: 360px;
+  padding-top: 40px;
+  @include fonts(58px, $font_weight2);
+  line-height: 80px;
+  letter-spacing: $letter-space1;
+}
+
+.banner-text {
+  text-align: center;
+  width: 525px;
+  padding: 40px 0;
+  @include fonts($font-size5, $font_weight1);
+  word-wrap: break-word;
+  letter-spacing: $letter-space1;
+  line-height: 30px;
+  color: $color-gray1;
+}
+
+.banner-buttons {
+  @include rowing(space-between);
+  padding-bottom: 35px;
+}
+
+.quote-btn-wrap {
+  margin: 0 10px 0 0;
+}

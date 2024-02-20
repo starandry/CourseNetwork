@@ -1,4 +1,4 @@
-@mixin rowing ($dist: null, $align: null, $direct: null){
+@mixin rowing($dist: null, $align: null, $direct: null) {
   display: flex;
   justify-content: $dist;
   align-items: $align;
@@ -10,4 +10,11 @@
     height: $second-numb;
     border-radius: $third-numb;
     margin: $fourth-numb;
+}
+
+@mixin fonts ($font-size: null, $font-weight: null) {
+  font: {
+    size: $font_size;
+    weight: $font-weight;
+  };
 }

@@ -1,0 +1,66 @@
+.card {
+  display: block;
+  width: 328px;
+  padding: 30px 40px;
+
+  &.-teacher,
+  &.-first-library {
+    background-color: $color-white1;
+  }
+
+  &.-second-library {
+    background-color: $color-dark-blue1;
+
+    > .card-desc {
+      color: $color-white1;
+    }
+  }
+}
+
+.icon-box {
+  @include rowing(center, center);
+  @include sizes(70px, 76px, $border-radius2, 3px 0 0 0);
+  background-color: $color-gray2;
+}
+
+.teach-cert,
+.books-library,
+.books-collection {
+  padding: 26px 0 2px;
+  @include fonts($font-size3);
+  color: $color-black1;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 50px;
+    height: 2px;
+    @include sizes(50px, 2px);
+    margin-top: 21px;
+    background-color: $color-red1;
+  }
+}
+
+.books-collection {
+  color: $color-white1;
+
+  &::after {
+    background-color: $color-white1;
+  }
+}
+
+.card-desc {
+  display: inline-block;
+  padding: 17px 0 6px;
+  line-height: 20px;
+  @include fonts($font_size2, $font_weight2);
+  color: $color-gray1;
+}
+
+.teach-cert,
+.books-library,
+.books-collection,
+.card-desc {
+  max-width: 250px;
+  word-wrap: break-word;
+}
