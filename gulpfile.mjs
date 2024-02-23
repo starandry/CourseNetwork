@@ -1,9 +1,11 @@
-const gulp = require('gulp');
-const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
-const cheerio = require('gulp-cheerio');
-const rename = require('gulp-rename');
-const htmlhint = require("gulp-htmlhint");
+import gulp from 'gulp';
+import svgmin from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import cheerio from 'gulp-cheerio';
+import rename from 'gulp-rename';
+import htmlhint from 'gulp-htmlhint';
+import imagemin from 'gulp-imagemin';
+import pngquant from 'imagemin-pngquant';
 
 const gulpSvgmin = () =>
     gulp.src('icons/*.svg')
@@ -11,7 +13,7 @@ const gulpSvgmin = () =>
             return {
                 plugins: [{ removeViewBox: false },
                     {
-                        name: "removeUselessStrokeAndFill",
+                        name: 'removeUselessStrokeAndFill',
                         params: {
                             stroke: true,
                             fill: true
@@ -45,8 +47,15 @@ const gulpSvgStore = () =>
         .pipe(gulp.dest('pages'));
 
 const checkHTML = () =>
-    gulp.src("pages/*.html")
+    gulp.src('pages/*.html')
         .pipe(htmlhint())
         .pipe(htmlhint.reporter());
 
-exports.default = gulp.series(gulpSvgmin, gulpSvgStore, checkHTML);
+const optPNG = () =>
+    gulp.src('images/*.png')
+        .pipe(imagemin([
+            pngquant({ quality: [0.9, 1] }) // Установка уровня качества для pngquant
+        ]))
+        .pipe(gulp.dest('images/min'));
+
+export const run = gulp.series(gulpSvgmin, gulpSvgStore, checkHTML, optPNG);
